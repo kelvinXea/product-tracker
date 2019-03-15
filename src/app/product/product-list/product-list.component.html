@@ -1,0 +1,12 @@
+<!-- <div class="form-inline pl-5 pr-n5"> -->
+<div class="adapt-list">
+  <ul class="list-inline">
+    <li
+      style="padding: 10px"
+      *ngFor="let product of (productList | async)"
+      class="list-inline-item"
+    >
+      <app-product-info [product]="product"></app-product-info>
+    </li>
+  </ul>
+</div>

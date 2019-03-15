@@ -1,0 +1,31 @@
+<div class="modal-header">
+  <h5 class="modal-title">Agregar Producto</h5>
+  <button (click)="modal.dismiss('Cancel')" type="button" class="close" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<form (ngSubmit)="add()" [formGroup]="addProductForm">
+  <div class="modal-body">
+    <div class="form-group">
+      <label>Nombre:</label>
+      <input class="form-control" formControlName="name" type="text" />
+    </div>
+    <div class="form-group">
+      <label>Precio:</label>
+      <input class="form-control" formControlName="price" type="number" />
+    </div>
+    <div class="form-group">
+      <label>Ganancia:</label>
+      <input class="form-control" formControlName="gain" type="number" />
+    </div>
+  </div>
+  <div class="modal-footer">
+      <button [disabled]="!addProductForm.valid" type="submit" class="btn btn-success">Añadir</button>
+      <button type="button" (click)="modal.dismiss('Cancel')" class="btn btn-secondary">
+        Cancelar
+      </button>
+    </div>
+</form>
+
+

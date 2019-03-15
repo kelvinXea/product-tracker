@@ -1,0 +1,35 @@
+<div class="card text-center" style="width: 14rem;">
+  <p class="card-title mb-n4">
+    <a  (click)="delete()" class="float-right back-close-icon"><i class="fa fa-times close-icon"></i></a>
+  </p>
+  <div class="card-body">
+    <h4 class="card-title text-warning">{{ product.name | titlecase }}</h4>
+    <h5 class="card-text text-secondary text-left ml-4">Precio: {{product.price}}</h5>
+    <h5 class="card-text text-left ml-4">Cantidad: {{ product.quantity }}</h5>
+    <h5 class="card-text text-success text-left ml-4">Ganancia: {{ product.gain * product.quantity }}</h5>
+    <h5 class="card-text text-danger text-left ml-4">
+      Restante:
+      {{ product.price * product.quantity - product.gain * product.quantity }}
+    </h5>
+    <h5 class="card-text text-info text-left ml-4">Total: {{ product.price * product.quantity }}</h5>
+
+    <button
+      (click)="addQuantity()"
+      type="button"
+      data-toggle="tooltip"
+      placement="top"
+      class="btn btn-success ml-1"
+    >
+      <i class="fas fa-plus"></i>
+    </button>
+    <button
+      (click)="removeQuantity()"
+      type="button"
+      data-toggle="tooltip"
+      placement="top"
+      class="btn btn-danger ml-1"
+    >
+      <i class="fas fa-minus"></i>
+    </button>
+  </div>
+</div>

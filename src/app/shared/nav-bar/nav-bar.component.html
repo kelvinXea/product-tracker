@@ -1,0 +1,20 @@
+<nav class="navbar sticky-top navbar-dark bg-dark">
+  <span class="navbar-text">
+    <div class="form-inline">
+      <input
+        class="form-control date-text"
+        type="text"
+        [(ngModel)]="date"
+        ngbDatepicker
+        #d="ngbDatepicker"
+      />
+      <button class="btn btn-info" (click)="d.toggle()">Fecha</button>
+    </div>
+  </span>
+  <span class="navbar-text">
+    <a class="text-success">Ganancias: {{ gain }}</a> -
+    <a class="text-danger"> Restante: {{ total - gain }} </a> -
+    <a class="text-info"> Total: {{ total }} </a>
+
+  </span>
+</nav>

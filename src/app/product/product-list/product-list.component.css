@@ -1,0 +1,15 @@
+.adapt-list{
+  text-align: unset;
+}
+
+@media (max-width: 540px) {
+  .adapt-list{
+    text-align: center;
+  }
+}
+
+@media (min-width: 540px) {
+  .adapt-list{
+    text-align: unset;
+  }
+}

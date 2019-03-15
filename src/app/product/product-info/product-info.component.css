@@ -1,0 +1,12 @@
+.close-icon {
+  cursor: pointer;
+  color: white;
+}
+
+.back-close-icon{
+  border-radius: 35px;
+  width: 25px;
+  height: 25px;
+  background-color: #dc3545;
+}
+
